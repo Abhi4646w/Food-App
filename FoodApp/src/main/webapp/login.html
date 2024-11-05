@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Food Delivery App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #87CEEB, #ffffff);
+            color: #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px #000;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1.5s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); }
+            to { transform: translateY(0); }
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        input {
+            padding: 12px;
+            width: 90%;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #4169e1;
+            box-shadow: 0 0 10px rgba(65, 105, 225, 0.5);
+            outline: none;
+        }
+
+        /* Updated button style to match index.html */
+        button {
+            padding: 12px 24px;
+            background-color: #87CEEB;
+            color: #fff;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #87CEEB;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(135, 206, 235, 0.6);
+            border: 2px solid #87CEEB;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #00008B;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: #00008B;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #87CEEB;
+        }
+
+        .forgot-password {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            form {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="Login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Login</button>
+        <p class="forgot-password"><a href="resetpassword.html">Forgotten Password?</a></p>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <style>
+        /* Apply a gradient background for a modern look */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #87CEEB, #ffffff); /* Gradient from sky blue to white */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            animation: backgroundAnimation 10s ease infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(120deg, #87CEEB, #ffffff); }
+            50% { background: linear-gradient(120deg, #ffffff, #87CEEB); }
+            100% { background: linear-gradient(120deg, #87CEEB, #ffffff); }
+        }
+
+        h1 {
+            color: #87CEEB; /* Sky blue title */
+            margin-bottom: 20px;
+            z-index: 1;
+            text-shadow: 2px 2px 4px #000000; /* Add shadow to text */
+            font-size: 3rem; /* Larger font size */
+            animation: titleAnimation 1s ease-out;
+        }
+
+        @keyframes titleAnimation {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            z-index: 1;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff; /* White text for buttons */
+            background-color: #87CEEB; /* Sky blue background for buttons */
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1.2rem; /* Increase font size */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
+            border: 2px solid #87CEEB;
+        }
+
+        nav a:hover {
+            background-color: #ffffff; /* White background on hover */
+            color: #87CEEB; /* Sky blue text on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+            border: 2px solid #87CEEB;
+        }
+
+        /* Add media query for responsiveness */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 20vh; /* Adjust padding for smaller screens */
+            }
+
+            h1 {
+                font-size: 2rem; /* Adjust font size for smaller screens */
+            }
+
+            nav a {
+                padding: 8px 16px; /* Adjust padding for smaller screens */
+                font-size: 1rem; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Festo</h1>
+    <nav>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+</body>
+</html>
